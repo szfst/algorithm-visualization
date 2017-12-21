@@ -33,10 +33,12 @@ public class AlgoVisualizer {
         setData(0, -1);
         for(int i  = 1;i < data.N();i++){
             setData(i,i);
-            for(int j = i;j>=0;j--){
-                if(data.get(j+1)<data.get(j)){
-                    data.swap(j+1,j);
-                    setData(i,j+1);
+            for(int j = i;j>0;j--){
+                if(data.get(j)<data.get(j-1)){
+                    data.swap(j,j-1);
+                    setData(i+1,j-1);
+                }else{
+                    break;
                 }
             }
         }
@@ -57,6 +59,6 @@ public class AlgoVisualizer {
         int sceneHeight = 800;
         int N = 100;
 
-        AlgoVisualizer vis = new AlgoVisualizer(sceneWidth, sceneHeight, N, InsertionSortData.Type.Default);
+        AlgoVisualizer vis = new AlgoVisualizer(sceneWidth, sceneHeight, N, InsertionSortData.Type.NearlyOrdered);
     }
 }
