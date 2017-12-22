@@ -46,6 +46,9 @@ public class InsertionSortData {
 
         return numbers[index];
     }
+    public void set(int index,int data){
+        numbers[index]=data;
+    }
 
     public void swap(int i, int j) {
         if( i < 0 || i >= numbers.length || j < 0 || j >= numbers.length)

@@ -41,6 +41,12 @@ public class AlgoVisualizer {
                     break;
                 }
             }
+            //方法二:
+//            int e = data.get(i);
+//            int j = i;
+//            for( ; j > 0 && (data.get(j-1)-e)> 0 ; j--)
+//                data.set(j,data.get(j-1));
+//            data.set(j,e);
         }
         setData(data.N(), -1);
     }
@@ -59,6 +65,6 @@ public class AlgoVisualizer {
         int sceneHeight = 800;
         int N = 100;
 
-        AlgoVisualizer vis = new AlgoVisualizer(sceneWidth, sceneHeight, N, InsertionSortData.Type.NearlyOrdered);
+        AlgoVisualizer vis = new AlgoVisualizer(sceneWidth, sceneHeight, N, InsertionSortData.Type.Default);
     }
 }
